@@ -1,0 +1,25 @@
+1 Folder: Assets 
+    -, chứa các file ảnh, audio, css, html hay js cần nhúng vào project 
+    -, có thể public 
+
+2 Folder: Components 
+    -, Share các Components được tái sử dụng ở nhiều nơi khác nhau trong project (chức năng)
+    -,
+
+3 Folder: Router
+    -, Nơi định nghĩa các Router mà web có thể đi đến được
+
+4 Folder: Store
+    -, Nơi chưa Redux
+
+5 Folder: Style
+    -, Nơi chứa các file scss, global
+
+6 Folder: Utils
+    -, Nơi chứa các function dùng chung
+
+7 Folder: Views
+    -, Nơi chứa các views của web
+
+8 Folder: Services
+    -, Nơi gọi API kết nối với Back-End
