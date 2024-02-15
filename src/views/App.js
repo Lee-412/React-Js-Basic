@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.scss';
+import MyComponent from './Example/MyComponent';
+// import DemoChaningForm from './Example/DemoChaningForm';
+import DemoForm from './Example/DemoForm';
 
 function App() {
   return (
@@ -9,15 +12,12 @@ function App() {
         <p>
           Hello World with React.js (Lee);
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* <DemoForm></DemoForm> */}
+        <MyComponent />
+        {/* <DemoChaningForm /> */}
+        {/* <MyComponent></MyComponent> */}
       </header>
+
     </div>
   );
 }
