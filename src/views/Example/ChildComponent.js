@@ -27,11 +27,12 @@ class ChildComponent extends React.Component {
         let a = '';
         return (
             <>
-                {showJob === false ? <div>
-                    <button onClick={() => {
-                        this.handleClickShow()
-                    }}>show</button>
-                </div>
+                {showJob === false ?
+                    <div>
+                        <button onClick={() => {
+                            this.handleClickShow()
+                        }}>show</button>
+                    </div>
                     :
                     <>
                         <div className="job-lists">
