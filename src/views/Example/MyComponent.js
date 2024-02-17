@@ -2,7 +2,6 @@
 import React from "react";
 import ChildComponent from "./ChildComponent";
 import AddComponent from "./addComponent";
-import DemoForm from "./DemoForm";
 class MyComponent extends React.Component {
 
     /*
@@ -21,14 +20,25 @@ class MyComponent extends React.Component {
         ]
     }
 
+    addNewJob = (job) => {
+
+        this.setState({
+            arrJobs: [...this.state.arrJobs, job]
+        });
+    }
+    checkId = (id) => {
+        return id % 1 !== 0 || this.state.arrJobs.some(item => id === item.id);
+    }
 
     render() {
 
 
         return (
             <>
-                <AddComponent />
-
+                <AddComponent
+                    addNewJob={this.addNewJob}
+                    checkId={this.checkId}
+                />
                 < ChildComponent
                     name={this.state.name}
                     age={this.state.age}

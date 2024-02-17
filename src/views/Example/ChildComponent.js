@@ -18,6 +18,10 @@ class ChildComponent extends React.Component {
             showJob: !this.state.showJob
         })
     }
+    order(a, b) {
+        return a < b ? -1 : (a > b ? 1 : 0);
+    }
+
     render() {
 
         let { arrJobs } = this.props;
@@ -37,14 +41,12 @@ class ChildComponent extends React.Component {
                     <>
                         <div className="job-lists">
                             {
-
-                                a = arrJobs.map((item, index) => {
-                                    return (
+                                arrJobs.sort((a, b) => parseInt(a.id, 10) - parseInt(b.id, 10))
+                                    .map((item, index) => (
                                         <div key={item.id}>
-                                            Job{item.id}:  {item.title} - {item.salary}
+                                            Job {item.id}: {item.title} - {item.salary} $
                                         </div>
-                                    )
-                                })
+                                    ))
                             }
                             {console.log("Check map array", a)}
                         </div>
