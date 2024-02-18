@@ -22,6 +22,11 @@ class ChildComponent extends React.Component {
         return a < b ? -1 : (a > b ? 1 : 0);
     }
 
+    handleClickDel(job) {
+        console.log(">>> handle Delete", job)
+        this.props.delJob(job.id)
+    }
+
     render() {
 
         let { arrJobs } = this.props;
@@ -44,7 +49,8 @@ class ChildComponent extends React.Component {
                                 arrJobs.sort((a, b) => parseInt(a.id, 10) - parseInt(b.id, 10))
                                     .map((item, index) => (
                                         <div key={item.id}>
-                                            Job {item.id}: {item.title} - {item.salary} $
+                                            Job {item.id}: {item.title} - {item.salary} $  <></>
+                                            <span onClick={() => { this.handleClickDel(item) }}>x</span>
                                         </div>
                                     ))
                             }

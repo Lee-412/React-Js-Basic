@@ -2,6 +2,7 @@
 import React from "react";
 import ChildComponent from "./ChildComponent";
 import AddComponent from "./addComponent";
+import DeleteComponent from "./deleteComponent";
 class MyComponent extends React.Component {
 
     /*
@@ -22,12 +23,33 @@ class MyComponent extends React.Component {
 
     addNewJob = (job) => {
 
+        let currentJob = this.state.arrJobs
+        currentJob.push(job)
+        // this.setState({
+        //     arrJobs: [...this.state.arrJobs, job]
+        // });
         this.setState({
-            arrJobs: [...this.state.arrJobs, job]
-        });
+            arrJobs: currentJob
+        })
     }
     checkId = (id) => {
         return id % 1 !== 0 || this.state.arrJobs.some(item => id === item.id);
+    }
+    delJob = (id) => {
+        let currentJob = this.state.arrJobs
+        const index = currentJob.findIndex(job => job.id === id);
+        if (index !== -1) {
+            currentJob.splice(index, 1);
+
+        }
+        else {
+            alert("There is no suitable content")
+        }
+        // Array filter
+        // currentJob = currentJob.filter(item => item.id !== id)
+        this.setState({
+            arrJobs: currentJob
+        })
     }
 
     render() {
@@ -35,15 +57,21 @@ class MyComponent extends React.Component {
 
         return (
             <>
+
                 <AddComponent
                     addNewJob={this.addNewJob}
                     checkId={this.checkId}
                 />
+                <DeleteComponent
+                    delJob={this.delJob} />
                 < ChildComponent
                     name={this.state.name}
                     age={this.state.age}
                     arrJobs={this.state.arrJobs}
+                    delJob={this.delJob}
                 />
+
+
             </>
         )
     }
