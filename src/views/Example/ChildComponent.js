@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import "./ChillComponentCss.scss"
 
 class ChildComponent extends React.Component {
 
@@ -38,9 +38,11 @@ class ChildComponent extends React.Component {
             <>
                 {showJob === false ?
                     <div>
-                        <button onClick={() => {
-                            this.handleClickShow()
-                        }}>show</button>
+                        {/* // style={{ color: "red" }} */}
+                        <button className="btn-show"
+                            onClick={() => {
+                                this.handleClickShow()
+                            }}>show</button>
                     </div>
                     :
                     <>
@@ -57,9 +59,10 @@ class ChildComponent extends React.Component {
                             {console.log("Check map array", a)}
                         </div>
                         <div>
-                            <button onClick={() => {
-                                this.handleClickHide()
-                            }}>hide</button>
+                            <button className="btn-hide"
+                                onClick={() => {
+                                    this.handleClickHide()
+                                }}>hide</button>
                         </div>
                     </>
                 }
@@ -67,6 +70,8 @@ class ChildComponent extends React.Component {
         )
     }
 }
+
+//function component
 
 // const ChildComponent = (props) => {
 //     console.log("check Props", props);
