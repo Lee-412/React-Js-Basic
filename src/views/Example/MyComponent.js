@@ -52,6 +52,12 @@ class MyComponent extends React.Component {
         })
     }
 
+    componentDidMount() {
+        console.log(">>> run ComponentDidMount ")
+    }
+    componentDidUpdate(prevProps, prevState) {
+        console.log(">>>run ComponentDidUpdate")
+    }
     render() {
 
 

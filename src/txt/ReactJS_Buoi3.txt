@@ -1,0 +1,18 @@
+1, StateLess / StateFull Component
+-, StateFul là những components có khả năng lưu trữ và quản lý trạng thái (state).
+-, StateFul quản lý, thực hiện các hành động như lưu trữ, cập nhật, xử lý sự kiện . rendering. thông qua state
+
+-, StateLess là những components không lưu trữ trạng thái (state) thường triển khai trong function component
+-, Được sử dụng để render giao diện dữ trên dữ liệu đầu vào 
+
+2, Conditional Output (render dữ liệu có điều kiện )
+-, Đối với state, sử dụng setState để cập nhật trạng thái cho dữ liệu 
+
+
+3, Split Component (Chia nhỏ components)
+
+4, Virtual DOM: (behind the sence) Một định dạng dữ liệu js dùng để thể hiện nội dung DOM tại 1 thời điểm nào đó,
+so sánh và nhận biết phần tử cần thay đổi, giảm thiểu việc load và reset toàn bộ mọi thứ trên giao diện hiện có
+
+5, ReactJs Lifecycle Methods 
+

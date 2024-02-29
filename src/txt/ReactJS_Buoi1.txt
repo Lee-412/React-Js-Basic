@@ -1,0 +1,117 @@
+1: Dự án React Js cơ bản
+-, câu lệnh bắt đầu: npm start
+
+2: Components - Bố cục của React.JS
+
+-, Có 2 loại component chính
+	+, Class Component
+	+, Function Component
+		-, function name() {}
+		-, const name = () => {}
+		-, let name = () => {}
+	
+-, Export  : 2 kiểu export 
+	+, export default nameFunction: mặc đình trả về giá trị cho cả Component
+
+	+, export {list name function} : trả về list Component
+
+-, 2 cách gọi Component trong Component khác
+
+	+, <MyComponent /> : Sử dụng chỉ gọi và thực hiện nội dung trong component 
+	 
+	+, <MyComponent></MyComponent> : Sử dụng nhằm mục đích muốn bổ sung thêm nội dung nếu muôn
+
+-, JSX : Sử dụng javaScript bên trong html bằng cặp dấu {bộ lệnh JS}
+
+-, Hàm return trong Component trả về 1 block phần tử của HTML
+
+-, 3 cách trả về nhiều thẻ HTML trong 1 hàm return
+	+, Sử dụng 1 khối div bọc lấy các khối còn lại
+
+	+, Sử dụng cặp thẻ React.Fragment bọc lấy các khối còn lại
+
+	+, Sử dụng cặp thẻ div đặc biệt <> </> bọc lấy các khối còn lại
+3: State 
+
+-, State: là những dữ liệu có thể bị thay đổi, mỗi lần thay đổi làm cho giao diện thay đổi theo
+	=> giúp cập nhật dữ liệu real time
+
+	+, là một object của JS  (giống với struct ở Java , C++)
+		 state = {
+        			name: "Lee",
+        			age: "19",
+      		 	 greeting: "Hello"
+    		}
+
+	+, Có 2 cách gọi Object state trong Component
+		-, this.state.name
+		-, this.state["name"]
+- VD về sử dụng state
+
+class MyComponent extends React.Component {
+
+    /*
+    JSX 
+    */
+
+    state = {
+        name: "Lee",
+        age: "19",
+        greeting: "Hello"
+    }
+    handleInputName = (event) => {
+        this.setState({
+            name: event.target.value
+        });
+
+    };
+
+    handleInputAge = (event) => {
+        this.setState({
+            age: event.target.value
+        });
+
+    };
+
+    render() {
+
+
+        return (
+            <>
+                <div className='first'>
+                    Change Your Name:
+                    <input
+
+                        value={this.state.name}
+                        type='text'
+                        onChange={(event) => {
+                            this.handleInputName(event);
+                        }}
+                    />
+                    <h1>
+                        {this.state.greeting}
+                        My name is {this.state.name}
+                    </h1>
+
+                    Change Your age:
+                    <input
+
+                        value={this.state.age}
+                        type='text'
+                        onChange={(event1) => {
+                            this.handleInputAge(event1);
+                        }}
+                    />
+                    <p>I'm {this.state.age} year's old </p>
+                </div>
+                <div className='second'>
+
+                </div >
+            </>
+        )
+    }
+}
+
+export default MyComponent;
+
+

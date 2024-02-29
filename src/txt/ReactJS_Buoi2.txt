@@ -1,0 +1,27 @@
+A: Nesting Component (khá giống Kế thừa)
+  
+1, Quan hệ cha - con Component
+	-, bọc component con trong một component cha khác, có thể sử dụng để thực hiện sử dụng lại các chức năng khác của dự án, 
+
+2, Props (Property data): Truyền dữ liệu từ cha tới con
+	-, Truyền dữ liệu từ component cha tới con.
+	-, Tạo ra một cấu trúc linh hoạt cho phép tái sử dụng code và chia sẻ data
+	-, Có thể truyền nhiều Props khác nhau và sử dụng tùy ý
+
+=> Với Props chỉ truyền data từ cha sang con, không có chiều ngược lại
+
+3, Props
+		
+
+4, Outputting Lists - Renders nhiều Data với props
+	-, Renders nhiều Data bằng dữ liệu dạng Array và vòng lặp Map
+	
+	vd  arrJobs.map((item, index) => {
+                            return (
+                                <div key={item.id}>
+                                    Job{item.id}:  {item.title} - {item.salary}
+                                </div>
+                            )
+                        })
+
+	=> Với mỗi phần tử trong array , cần có một key riêng biệt, việc tạo key giúp ReacJs phân biệt được các phần tử thay đổi khi render để tối ưu hiệu năng
