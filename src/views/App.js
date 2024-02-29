@@ -3,17 +3,18 @@ import './App.scss';
 import MyComponent from './Example/MyComponent';
 // import DemoChaningForm from './Example/DemoChaningForm';
 import DemoForm from './Example/DemoForm';
-
+import TodoAppComponent from './TodoApp/todoAppComponent';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-
+        <TodoAppComponent />
         {/* <DemoForm></DemoForm> */}
-        <MyComponent />
+        {/* <MyComponent /> */}
         {/* <DemoChaningForm /> */}
         {/* <MyComponent></MyComponent> */}
+
       </header>
 
     </div>
