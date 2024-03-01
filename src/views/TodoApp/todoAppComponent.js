@@ -1,7 +1,7 @@
 import React from "react";
 import ShowListWork from "./ShowListWork";
 import "./todoCss.scss"
-
+import { toast } from 'react-toastify';
 
 class todoAppComponent extends React.Component {
     state = {
@@ -37,6 +37,7 @@ class todoAppComponent extends React.Component {
             alert("Id đã tồn tại hoặc không hợp lệ")
         }
         else {
+            toast.success("oke")
             let currentList = this.state.listTodo
             const newWork = {
                 workId: this.state.workId,
@@ -51,9 +52,6 @@ class todoAppComponent extends React.Component {
                 workDeadline: "",
                 listTodos: currentList
             });
-
-            console.log(">>> check: ", this.state.listTodo)
-            console.log(">>> check input:", this.state)
 
         }
     }
