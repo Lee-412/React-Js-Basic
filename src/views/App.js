@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.scss';
 import MyComponent from './Example/MyComponent';
 // import DemoChaningForm from './Example/DemoChaningForm';
-import DemoForm from './Example/DemoForm';
+// import DemoForm from './Example/DemoForm';
 import TodoAppComponent from './TodoApp/todoAppComponent';
 function App() {
   return (

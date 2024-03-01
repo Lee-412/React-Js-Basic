@@ -45,8 +45,7 @@ class MyComponent extends React.Component {
         else {
             alert("There is no suitable content")
         }
-        // Array filter
-        // currentJob = currentJob.filter(item => item.id !== id)
+
         this.setState({
             arrJobs: currentJob
         })
