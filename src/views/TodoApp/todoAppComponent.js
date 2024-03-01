@@ -1,6 +1,8 @@
 import React from "react";
 import ShowListWork from "./ShowListWork";
 import "./todoCss.scss"
+
+
 class todoAppComponent extends React.Component {
     state = {
         workId: "",
@@ -52,6 +54,7 @@ class todoAppComponent extends React.Component {
 
             console.log(">>> check: ", this.state.listTodo)
             console.log(">>> check input:", this.state)
+
         }
     }
     delJob = (workId) => {
@@ -97,9 +100,9 @@ class todoAppComponent extends React.Component {
         return (
             <>
                 <h1>Welcome to TodoApp by Lee</h1>
-                <div>
+                <div className="input_container">
                     <div className="title">WorkId:
-                        <input className="input-text"
+                        <input className="input_text"
                             type="text"
                             value={this.state.workId}
                             onChange={(event) => this.handleOnchange("workId", event)}
@@ -107,7 +110,7 @@ class todoAppComponent extends React.Component {
                     </div>
 
                     <div className="title">WorkName:
-                        <input className="input-text"
+                        <input className="input_text"
                             type="text"
                             value={this.state.workName}
                             onChange={(event) => this.handleOnchange("workName", event)}
@@ -115,7 +118,7 @@ class todoAppComponent extends React.Component {
                     </div>
 
                     <div className="title">workDeadline:
-                        <input className="input-text"
+                        <input className="input_text"
                             type="text"
                             value={this.state.workDeadline}
                             onChange={(event) => this.handleOnchange("workDeadline", event)}
@@ -123,9 +126,9 @@ class todoAppComponent extends React.Component {
                         ></input>
                     </div>
 
-                    <input className="click-Add" type="submit" value="add" onClick={(event) => {
+                    <button className="click-Add" onClick={(event) => {
                         this.handleClickAdd();
-                    }}></input>
+                    }}>add</button>
                 </div>
 
                 <ShowListWork

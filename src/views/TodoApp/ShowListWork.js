@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./todoCss.scss"
 class ShowListWork extends React.Component {
     handleClickDel(item) {
         this.props.delJob(item.workId)
@@ -11,15 +11,15 @@ class ShowListWork extends React.Component {
     render() {
         let { listJob } = this.props;
         return (
-            <div className="lists">
+            <div className="list_todo">
                 {
                     listJob && listJob.length > 0 &&
                     listJob.sort((a, b) => parseInt(a.workId, 10) - parseInt(b.workId, 10))
                         .map((item, index) => (
-                            <div key={item.workId}>
-                                Job {item.workId}: {item.workName} - {item.workDeadline}
-                                <input className='click-del' type='submit' value="del" onClick={() => { this.handleClickDel(item) }} ></input>
-                                <input className='click-edit' type='submit' value="edit" onClick={() => { this.handleClickEdit(item) }}></input><></>
+                            <div className='todo_child' key={item.workId} >
+                                work {item.workId}: {item.workName} - {item.workDeadline}
+                                <button className='click-del' onClick={() => { this.handleClickDel(item) }} >delete</button>
+                                <button className='click-edit' onClick={() => { this.handleClickEdit(item) }}>edit</button><></>
 
                             </div>
                         ))

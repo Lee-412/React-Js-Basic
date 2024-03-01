@@ -1,4 +1,38 @@
+button {
+    cursor: pointer;
+}
+
 .click-Add {
     background-color: green;
     color: red
 }
+
+
+.list_todo {
+    width: 400px;
+    margin: 0 auto;
+
+    .todo_child {
+        &:first-child {
+            padding-top: 6px;
+            border-top: 1px solid gray;
+        }
+
+        border-bottom: 1px solid gray;
+        margin-top: 6px;
+        height: 30px;
+    }
+
+    .click-del,
+    .click-submit {
+        text-align: right;
+    }
+}
+
+
+// .input_container {
+//     .title {}
+
+//     .input_text {}
+
+// }
