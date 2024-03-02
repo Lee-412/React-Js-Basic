@@ -62,7 +62,7 @@ class MyComponent extends React.Component {
 
         return (
             <>
-
+                <div>Welcome to Job Work by Lee</div>
                 <AddComponent
                     addNewJob={this.addNewJob}
                     checkId={this.checkId}

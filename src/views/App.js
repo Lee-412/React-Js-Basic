@@ -5,48 +5,51 @@ import MyComponent from './Example/MyComponent';
 // import DemoForm from './Example/DemoForm';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import NavCom from './nav/NavCom';
 import TodoAppComponent from './TodoApp/todoAppComponent';
+import HomeCom from './Home/HomeCom';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+  Routes
+} from "react-router-dom";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <TodoAppComponent />
-        {/* <DemoForm></DemoForm> */}
-        {/* <MyComponent /> */}
-        {/* <DemoChaningForm /> */}
-        {/* <MyComponent></MyComponent> */}
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          <NavCom />
+          <img src={logo} className="App-logo" alt="logo" />
 
-        {/* <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-          transition="bounce"  // Use the name of the CSS class here
-        /> */}
-        <ToastContainer
-          position="top-right"
-          autoClose={1100}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-          transition="bounce"
-        />
-      </header>
 
-    </div>
+          <Routes>
+            <Route path="/" element={<HomeCom />} />
+            <Route path="/todos" element={<TodoAppComponent />} />
+            <Route path="/job" element={<MyComponent />} />
+          </Routes>
+
+
+          <ToastContainer
+            position="top-right"
+            autoClose={1100}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+            transition="bounce"
+          />
+        </header>
+      </div>
+    </BrowserRouter>
   );
 }
 
