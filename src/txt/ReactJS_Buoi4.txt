@@ -1,4 +1,12 @@
 1: React Router
-    -, Quickstart React Router
-    -, React Router Dom
+        -, Quickstart React Router
+        -, Update react router dom v6   
+        -, React Router Dom
 2: React Router Redirect
+
+3: HOC (Higher-Order Component) : 
+        -, là một kỹ thuật trong React để tái sử dụng logic và chức năng giữa các component
+        -, là một hàm nhận một component và trả về một component mới có các tính năng hoặc logic mở rộng. 
+        -, HOC có thể được sử dụng để encapsulate logic và tái sử dụng nó trong nhiều component mà không cần lặp lại mã.
+
+        => bọc component trong 1 hàm component để sử dụng lại thông tin của code khác 

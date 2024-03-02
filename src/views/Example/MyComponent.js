@@ -3,6 +3,7 @@ import React from "react";
 import ChildComponent from "./ChildComponent";
 import AddComponent from "./addComponent";
 import DeleteComponent from "./deleteComponent";
+import Color from "../HOC/color";
 class MyComponent extends React.Component {
 
     /*
@@ -82,4 +83,4 @@ class MyComponent extends React.Component {
     }
 }
 
-export default MyComponent;
+export default Color(MyComponent);

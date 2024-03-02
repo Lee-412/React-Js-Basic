@@ -2,7 +2,7 @@ import React from "react";
 import ShowListWork from "./ShowListWork";
 import "./todoCss.scss"
 import { toast } from 'react-toastify';
-
+import Color from "../HOC/color";
 class todoAppComponent extends React.Component {
     state = {
         workId: "",
@@ -138,4 +138,4 @@ class todoAppComponent extends React.Component {
         )
     }
 }
-export default todoAppComponent; 
+export default Color(todoAppComponent); 

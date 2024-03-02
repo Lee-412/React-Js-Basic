@@ -5,6 +5,7 @@ import {
     Link, NavLink
 
 } from "react-router-dom";
+
 class NavCom extends React.Component {
     render() {
         return (
