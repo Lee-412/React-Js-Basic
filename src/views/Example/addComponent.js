@@ -53,7 +53,7 @@ class addComponent extends React.Component {
         return (
 
             <form>
-                {this.props.id} : <input type="text"
+                Job's: {this.props.id} : <input type="text"
                     value={this.state.id}
                     onChange={(event) => { this.handleChangeId(event) }}
                 /> <br></br>
